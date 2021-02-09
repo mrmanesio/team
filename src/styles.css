@@ -1,0 +1,277 @@
+:root {
+  --title-color: #2764a2;
+  --button-color: #629fde;
+  --secont-color: #afc5dc;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+button, select, input {
+  border-radius: 5px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid#ccc;
+  background-color: #fff;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+.section-calendar {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.section-calendar_top-block {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.section-calendar_title {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.section-calendar_btn {
+  background: var(--button-color);
+  border: 1px solid var(--secont-color);
+  padding: 0 50px;
+  font-weight: normal;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.section-calendar_select {
+  border: 1px solid var(--secont-color);
+  padding: 5px;
+  font-size: 18px;
+}
+
+/* CALENDAR */
+.calendar {
+  border-collapse: collapse;
+}
+
+.calendar_title {
+  background-color: var(--title-color);
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+tr {
+  height: 70px;
+  text-align: center;
+}
+
+td,
+th {
+  width: 300px;
+  border: 1px solid var(--secont-color);
+}
+
+.calendar-time td {
+  position: relative;
+}
+
+.calendar_cell {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--title-color);
+  font-size: 18px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.calendar_cell--close {
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 1;
+  font-size: 25px;
+}
+
+/* POPUP ADD EVENT */
+
+.popup-event {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  background-color: var(--seecond-color);
+  z-index: 300;
+  overflow: auto;
+}
+
+.popup-event.is-open {
+  display: flex;
+  pointer-events: initial;
+}
+
+.popup-event_form {
+  position: relative;
+  width: 500px;
+  background-color: white;
+  z-index: 400;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.popup-event_form--body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.popup_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  line-height: 23px;
+  color:  var(--title-color);
+  background: #fff;
+  z-index: 100500;
+  cursor: pointer;
+}
+
+.popup-event_form--title {
+  color: white;
+  text-align: center;
+  background-color: var(--title-color);
+  padding: 20px;
+  font-size: 25px;
+}
+
+.popup-event_input,
+.popup-event_selector {
+  border: 1px solid#ccc;
+}
+
+.popup-event_input {
+  padding: 10px;
+  width: 220px;
+  height: 23px;
+}
+
+.popup-event_selector {
+  padding: 10px;
+}
+
+.popup_bnt_block {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+.popup_bnt_cancel {
+  margin-right: 30px;
+}
+
+.block-participants {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scrollbar-participants {
+  position: absolute;
+  top: 43px;
+  width: 200px;
+  height: 120px;
+  border: 1px solid#ccc;
+  background-color: #fff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+  overflow-y: scroll;
+  display: none;
+}
+
+.block-participants_input {
+    width: 180px;
+}
+
+.scrollbar-participants.is-open {
+  display: block;
+}
+
+.scrollbar-participants div {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.scrollbar-participants div:hover {
+  background-color: #ccc;
+}
+
+.block-participants_btns {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin-left: 10px;
+  width: 50px;
+}
+
+.block-participants_btn {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.block-participants_btn:hover {
+    background-color: #ccc;
+}

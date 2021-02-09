@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Tracker</title>
+</head>
+<body>
+     
+     <div class="section-calendar">
+         <div class="section-calendar_top-block">
+     <h1 class="section-calendar_title">Team Tracker</h1>
+       <select  class="section-calendar_select js-filterParticipants" name="participants">  
+        <option value="All members">All members</option>    
+        <option value="Alex">Alex</option>
+        <option value="Mark">Mark</option>
+        <option value="Maria">Maria</option>
+        <option value="Bob">Bob</option>
+        <option value="Oksana">Oksana</option>
+        <option value="Michael">Michael</option>
+       </select>
+     <button class="section-calendar_btn js-open-eventPopup">New Event +</button>  
+      </div>
+     <table class="calendar" id="calendar">
+           <tr class="calendar_title">
+               <th></th>
+               <th>Monday</th>
+               <th>Tuesday</th>
+               <th>Wednesday</th>
+               <th>Thursday</th>
+               <th>Friday</th>
+           </tr>
+           <tr class="calendar-time"><td class="calendar-time_title">10:00</td></tr>
+           <tr class="calendar-time"><td class="calendar-time_title">11:00</td></tr>
+           <tr class="calendar-time"><td class="calendar-time_title">12:00</td></tr>
+           <tr class="calendar-time"><td class="calendar-time_title">13:00</td></tr>
+           <tr class="calendar-time"><td class="calendar-time_title">14:00</td></tr>
+           <tr class="calendar-time"><td class="calendar-time_title">15:00</td></tr>
+           <tr class="calendar-time"><td class="calendar-time_title">16:00</td></tr>
+           <tr class="calendar-time"><td class="calendar-time_title">17:00</td></tr>
+           <tr class="calendar-time"><td class="calendar-time_title">18:00</td></tr>
+     </table>
+     </div>
+
+     <div class="popup-event  js_eventPopup">
+         <form class="popup-event_form js-event_form">
+            <h2 class="popup-event_form--title">New event</h2>
+            <div class="popup-event_form--body">
+                <div class="input-group">
+                    <span class="popup-event_text">Name of the event:</span>
+                    <input class="popup-event_input" type="text" name="event" required>
+                </div>
+                <div class="input-group">
+                    <span class="popup-event_text">Participants:</span>
+                    <div class="block-participants">
+                        <input class="popup-event_input block-participants_input js-input-participants"  name="participants" required>
+                        <div class="block-participants_btns">
+                            <button class="block-participants_btn js-add_participants">+</button>
+                            <button class="block-participants_btn js-remove_participants">-</button>
+                        </div>
+                        <div class="scrollbar-participants js_participants-block">
+                            <div>Alex</div>
+                            <div>Mark</div>
+                            <div>Maria</div>
+                            <div>Bob</div>
+                            <div>Oksana</div>
+                            <div>Michael</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div>
+                        <span class="popup-event_text">Day:</span>
+                        <select class="popup-event_selector" name="day" required>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="popup-event_text">Time:</span>
+                        <select class="popup-event_selector" name="time" required>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                        </select> 
+                    </div>
+                </div>
+            </div>
+            <div class="popup_bnt_block">
+                <button class="popup_bnt popup_bnt_cancel ja-cancel-addEvent" type="button">Cancel</button>  
+                <button class="popup_bnt popup_bnt_add js-add-event" type="submit">Create</button>    
+            </div> 
+            <button class="popup_close js-close-eventPopup"><strong>&times;</strong></button>
+         </form>
+     </div>
+</body>
+</html>
