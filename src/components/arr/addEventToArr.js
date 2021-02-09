@@ -9,6 +9,7 @@ function addEventToArr (arr, day, time, participants, event)   {
     objectTime.event=event;
     objectTime.participants=participants.split (' ');
     console.log(arr);
+    // localStorage.setItem('db', arr);
     addEventToTable(indexDay, indexTime, event);
 }
 

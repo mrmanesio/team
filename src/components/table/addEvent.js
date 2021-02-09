@@ -1,5 +1,6 @@
 
 function  addEventToTable (indexDay, indexTime, event) { 
+  
     let cell = document.querySelector(`[index-day="${indexDay}"][index-time="${indexTime}"]`);
        const eventBlock = `
        <div class="calendar_cell js-card-event"  draggable=true>

@@ -19,3 +19,8 @@ refs.table.addEventListener('click', removeEvent);
 refs.bntAddParticipants.addEventListener('click', addParticipants);
 refs.bntRemoveParticipants.addEventListener('click', removeParticipants);
 refs.filterParticipants.addEventListener('change', filterMember);
+refs.popup.addEventListener('click', e => {
+   if (e.target.classList.contains('popup-event')) {
+     closePopup();
+   }
+})
